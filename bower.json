@@ -1,0 +1,19 @@
+{
+  "name": "ImageServer",
+  "version": "0.0.0",
+  "authors": [
+    "Kiris-tingna <1206802260@qq.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "^4.6.3"
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>图床</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/flexslider.css">
+
+<style>
+    .flexslider{width: 500px; margin-bottom: 0}
+    .flex-control-nav {
+        display: none;
+    }
+
+    .form-control {
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #f5f5f5;
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        font-size: 13px;
+    }
+</style>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- nav -->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">图床</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">语言</a></li>
+    </ul>
+    <p class="navbar-text navbar-right">上传与分享您的照片</p>
+  </div>
+</nav>
+
+    <!-- container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 IM-f">JPG&nbsp;JPEG&nbsp;PNG&nbsp;GIF 最多&nbsp;4MB</div>
+            <div class="col-md-2"><i></i>关闭</div>
+        </div>
+
+        <!-- 主要部件 -->
+        <div id="upload" class="jumbotron">
+            <div class="IM-info">
+                <h2 class="text-center"><i class="fa fa-file-text-o"></i>&emsp;拖拽图片至区域后完成上传</h2>
+                <h6 class="text-center">您也可以浏览您的计算机或者<a style="cursor: pointer;"data-toggle="modal" data-target="#urlImage">添加图像url</a></h6>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div id="PicAlbum" class="col-md-6">
+                <h3 class="content-header">相册<small>Subtext for header</small>
+                </h3>
+            </div>
+            <div id="Im-Album" class="col-md-6">
+                <h3 class="content-header">幻灯<small>Subtext for header</small></h3>
+                <div class="IM-album-section">
+                    <div class="IM-album-header"></div>
+                    <div class="IM-album-desc"></div>
+                    <div class="flexslider">
+                        <ul class="slides"></ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+<!-- hidden area -->
+<!-- Modal -->
+<div class="modal fade" id="PicDetail">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          图像链接 + 嵌入代码
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="input-group">
+            <span class="input-group-addon" id="a1">图片名称</span>
+            <input id="p1" type="text" class="form-control" placeholder="图片名称" aria-describedby="a1">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="a2">图片地址</span>
+            <input id="p2" type="text" class="form-control" placeholder="图片地址" aria-describedby="a2">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="a3">html</span>
+            <input id="p3" type="text" class="form-control" placeholder="html" aria-describedby="a3">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="a4">markdown</span>
+            <input id="p4" type="text" class="form-control" placeholder="markdown" aria-describedby="a4">
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ hidden area end -->
+<div class="modal fade bs-example-modal-sm" id="urlImage">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title">添加图像url</h5>
+        </div>
+        <div class="modal-body" id="Url-content">
+            <div class="input-group">
+                <input id="Url-input" type="text" class="form-control" value="http://ww4.sinaimg.cn/mw600/005OQpZwjw1f42sywiiyaj30ii0icgnc.jpg">
+                <div class="input-group-btn">
+                    <button id="Url-btn" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+            <div>
+                <p class="IM-alert"></p>
+            </div>
+            <div class="IM-preview"></div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--/ hidden area end -->
+    <footer></footer>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- 配置文件 -->
+    <script src="public/js/config.js"></script>
+    <script src="public/js/jquery.easing.js"></script>
+    <script src="public/js/jquery.filedrop.js"></script>
+    <script src="public/js/jquery.flexslider-min.js"></script>
+    <script src="public/js/IM.fileupload.js"></script>
+    <script src="public/js/IM.album.js"></script>
+</body>
+</html>

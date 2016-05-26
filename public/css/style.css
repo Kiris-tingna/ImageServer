@@ -1,0 +1,43 @@
+body {
+    font-family: "MicroSoft YaHei";
+}
+
+/* small font*/
+.IM-f {    
+    font-size: 12px;
+    color: #999;
+}
+.IM-item-head {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.IM-info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    margin-left: -40px;
+    margin-right: -40px;
+    border: 3px dashed #f8f8f8;
+}
+.modal-body .input-group {
+    margin: 10px 0;
+}
+
+.input-group-addon {
+    min-width: 100px;
+}
+
+/*component*/
+.content-header {
+    margin-top: 0;
+}
+.progress {
+    margin-bottom: 0;
+    height: 10px;
+}
+
+/*lists*/
+#PicAlbum .thumbnail{
+    height: 180px;
+}
