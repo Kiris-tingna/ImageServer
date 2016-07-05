@@ -3,8 +3,8 @@
 
 /**
  * file extension
- * @param  [type] $file_name [description]
- * @return [type]            [description]
+ * @param $file_name
+ * @return string
  */
 function get_extension($file_name){
     $ext = explode('.', $file_name);
@@ -63,8 +63,8 @@ function shorturl($input) {
 
 /**
  * 删除敏感字符
- * @param  [type] $value [description]
- * @return [type]        [description]
+ * @param $value
+ * @return array|string
  */
 function stripSlashesDeep($value) {
     $value = is_array($value) ? array_map('stripSlashesDeep', $value) : stripslashes($value);

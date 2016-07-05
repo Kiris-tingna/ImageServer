@@ -14,8 +14,11 @@ class Picture {
     }
 
     /**
-     * [save description]
-     * @return [type] [description]
+     * save
+     * @param $aid
+     * @param $url
+     * @param $short
+     * @return mixed
      */
     public function save($aid, $url, $short) {
         $n = $this->db->add($this->table, array(
@@ -25,17 +28,21 @@ class Picture {
         );
         return $n;
     }
+
     /**
-     * [selectAlbums description]
-     * @param  [type] $aid [description]
-     * @return [type]      [description]
+     * selectAlbums
+     * @param $aid
+     * @return array
      */
     public function selectAlbums($aid) {
         $arr = $this->db->fetLimit($this->table, $field = 'origin_url, short_url', 'id DESC', 5, $where = "aid=".$aid);
         return $arr;
     }
+
     /**
      * delete
+     * @param $id
+     * @return mixed
      */
     public function deletePic($id) {
         $n = $this->db->delete($this->table, $where ="id = $id");

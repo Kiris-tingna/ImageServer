@@ -3,9 +3,14 @@ body {
 }
 
 /* small font*/
-.IM-f {    
+.IM-f {
     font-size: 12px;
-    color: #999;
+    color: #fff;
+}
+
+.IM-footer {
+    font-size: 12px;
+    color: #ccc;
 }
 .IM-item-head {
     font-size: 12px;

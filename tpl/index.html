@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="public/css/flexslider.css">
 
 <style>
+    .navbar {
+        margin-bottom: 0;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    }
     .flexslider{width: 500px; margin-bottom: 0}
     .flex-control-nav {
         display: none;
@@ -23,6 +27,19 @@
         font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
         font-size: 13px;
     }
+
+    .banner {
+        margin-bottom: 20px;
+        padding: 40px 0 20px 0;
+        background: url('./public/images/banner.jpg') 0 0 no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #676767;
+    }
+
+    .jumbotron {
+        background: rgba(238, 238, 238, 0.5);
+    }
 </style>
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,7 +48,7 @@
 <body>
     <!-- nav -->
 <nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container">
+    <div class="container">
     <div class="navbar-header">
         <a class="navbar-brand" href="#">图床</a>
     </div>
@@ -41,15 +58,30 @@
         <li><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>
-        <li><a href="#">语言</a></li>
     </ul>
     <p class="navbar-text navbar-right">上传与分享您的照片</p>
-  </div>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    <i class="fa fa-fw fa-language" aria-hidden="true"></i>
+                    中文<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">英文</a></li>
+                    <li><a href="#">日本語</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </nav>
 
     <!-- container -->
-    <div class="container">
-        <div class="row">
+    <div class="banner">
+        <div class="container">
+
+
+            <div class="row">
             <div class="col-md-10 IM-f">JPG&nbsp;JPEG&nbsp;PNG&nbsp;GIF 最多&nbsp;4MB</div>
             <div class="col-md-2"><i></i>关闭</div>
         </div>
@@ -61,7 +93,34 @@
                 <h6 class="text-center">您也可以浏览您的计算机或者<a style="cursor: pointer;"data-toggle="modal" data-target="#urlImage">添加图像url</a></h6>
             </div>
         </div>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row text-center" style="margin-bottom:40px;">
+            <h1>2种方式可以上传任何图片</h1>
+            <hr>
+
+            <div class="col-sm-4">
+                <i class="fa fa-5x fa-magic" aria-hidden="true"></i>
+                <h2 class="permtext">URL-解析</h2>
+                <p>输入url上传网络资源的图片</p>
+            </div>
+            <hr class="visible-xs">
+
+            <div class="col-sm-4">
+                <i class="fa fa-5x fa-clipboard" aria-hidden="true"></i>
+                <h2 class="permtext">本地拖拽上传</h2>
+                <p>拖拽您想要上传的图片至上传框</p>
+            </div>
+            <hr class="visible-xs">
+
+            <div class="col-sm-4">
+                <i class="fa fa-5x fa-bookmark" aria-hidden="true"></i>
+                <h2 class="permtext">短地址外链</h2>
+                <p>输出短地址外链，cdn加速</p>
+            </div>
+        </div>
 
         <div class="row">
             <div id="PicAlbum" class="col-md-6">
@@ -80,6 +139,8 @@
                 
             </div>
         </div>
+
+
     </div>
 
 
@@ -142,7 +203,12 @@
   </div>
 </div>
 <!--/ hidden area end -->
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <hr>
+            <p class="text-center IM-footer">copyright&copy;Kiristingna</p>
+        </div>
+    </footer>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
