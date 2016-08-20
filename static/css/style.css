@@ -10,6 +10,18 @@ body {
     display: none;
 }
 
+.flex-prev, .flex-next {
+    background: rgba(0, 0, 0, .5);
+}
+
+.flex-prev {
+    padding-left: 10px;
+}
+
+.flex-next {
+    padding-right: 10px;
+}
+
 .form-control {
     line-height: 1.42857143;
     color: #333;

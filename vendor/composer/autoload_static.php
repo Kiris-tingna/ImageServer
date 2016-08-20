@@ -32,6 +32,13 @@ class ComposerStaticInit52e5a5072993ae0b2612d52f8754d9a9
                 0 => __DIR__ . '/..' . '/filp/whoops/src',
             ),
         ),
+        'R' =>
+            array(
+                'Requests' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/rmccue/requests/library',
+                    ),
+            ),
     );
 
     public static $classMap = array (

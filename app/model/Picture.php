@@ -21,7 +21,9 @@ class Picture extends model
     }
     public function listAll($aid) {
         $result = $this->select($this->table, array('origin_url','short_url'), array(
-            'aid'=> $aid
+            'aid' => $aid,
+            'ORDER' => array('id' => 'DESC'),
+            'LIMIT' => '4'
         ));
         return $result;
     }

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Whoops' => array($vendorDir . '/filp/whoops/src'),
+    'Requests' => array($vendorDir . '/rmccue/requests/library'),
 );

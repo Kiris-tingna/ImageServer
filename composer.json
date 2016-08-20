@@ -4,7 +4,8 @@
     "php":">=5.4.0",
     "filp/whoops": "*",
     "noahbuscher/macaw": "dev-master",
-    "catfan/medoo": "*"
+    "catfan/medoo": "*",
+    "rmccue/requests": ">=1.0"
   },
   "config":{
     "secure-http": true

@@ -10,6 +10,7 @@ namespace app\controller;
 use app\model\Album;
 use app\model\Picture;
 use core\lib\upload;
+use Requests;
 
 class IndexController extends \core\SAO
 {
@@ -63,29 +64,17 @@ class IndexController extends \core\SAO
 
         $guid = toGuidString($_url);
         $ext = get_extension($_url);
-
-        ob_start();
-        // curl 句柄
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-        curl_setopt($ch, CURLOPT_URL, $_url);
-        curl_setopt($ch, CURLOPT_HEADER, 0);// 返回的值包含Http头
-
-        curl_exec($ch);
-        curl_close($ch);
-        $content = ob_get_contents();
-        ob_end_clean();
+        $response = Requests::get($_url);
 
         // 上传到制定upload目录下
         $upload_dir = mkdirsByDate(IMAGE_SERVER);
         $upload_file = $upload_dir . '/' . $guid . '.' . $ext;
-        file_put_contents($upload_file, $content);
-        // 短地址
-//        $short = shorturl($upload_file);
+        file_put_contents($upload_file, $response->body);
         // save 持久化
-        $_url = PhytoDomain($upload_file);
+        $img_long_url = PhytoDomain($upload_file);
+        $img_short_url = shorturl($upload_file);// 短地址
         $pm = new Picture();
-        if($pm->saveOne(1, $_url, '')){
+        if ($pm->saveOne(1, $img_long_url, $img_short_url[1])) {
             $this->json(200,'success', PhytoDomain($upload_file));
         }else{
             $this->json(500,'err', 'error');
@@ -102,7 +91,6 @@ class IndexController extends \core\SAO
         }
         $this->json('200', 'success', $albums);
     }
-
 
 //    /**
 //     * 删除单张图片
