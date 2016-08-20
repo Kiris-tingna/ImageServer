@@ -1,0 +1,151 @@
+[
+    {
+        "name": "filp/whoops",
+        "version": "1.1.10",
+        "version_normalized": "1.1.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/filp/whoops.git",
+            "reference": "72538eeb70bbfb11964412a3d098d109efd012f7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/filp/whoops/72538eeb70bbfb11964412a3d098d109efd012f7.zip",
+            "reference": "72538eeb70bbfb11964412a3d098d109efd012f7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.9.*"
+        },
+        "time": "2015-06-29 05:42:04",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Whoops": "src/"
+            },
+            "classmap": [
+                "src/deprecated"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Filipe Dobreira",
+                "homepage": "https://github.com/filp",
+                "role": "Developer"
+            }
+        ],
+        "description": "php error handling for cool kids",
+        "homepage": "https://github.com/filp/whoops",
+        "keywords": [
+            "error",
+            "exception",
+            "handling",
+            "library",
+            "silex-provider",
+            "whoops",
+            "zf2"
+        ]
+    },
+    {
+        "name": "noahbuscher/macaw",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/noahbuscher/Macaw.git",
+            "reference": "c58100a43223a808135bab57130da911611d0d2a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/noahbuscher/Macaw/c58100a43223a808135bab57130da911611d0d2a.zip",
+            "reference": "c58100a43223a808135bab57130da911611d0d2a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2016-05-10 20:06:30",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "NoahBuscher\\Macaw\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Simple PHP router class."
+    },
+    {
+        "name": "catfan/medoo",
+        "version": "v1.1.2",
+        "version_normalized": "1.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/catfan/Medoo.git",
+            "reference": "d845b50455893d931ee6a86e1a17276847764385"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/catfan/Medoo/d845b50455893d931ee6a86e1a17276847764385.zip",
+            "reference": "d845b50455893d931ee6a86e1a17276847764385",
+            "shasum": ""
+        },
+        "require": {
+            "ext-pdo": "*",
+            "php": ">=5.1"
+        },
+        "suggest": {
+            "ext-pdo_dblib": "For MSSQL or Sybase databases on Linux/UNIX platform",
+            "ext-pdo_mysql": "For MySQL or MariaDB databases",
+            "ext-pdo_oci": "For Oracle databases",
+            "ext-pdo_pqsql": "For PostgreSQL databases",
+            "ext-pdo_sqlite": "For SQLite databases",
+            "ext-pdo_sqlsrv": "For MSSQL databases on Windows platform"
+        },
+        "time": "2016-07-07 17:58:29",
+        "type": "framework",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "medoo.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Angel Lai",
+                "email": "angel@catfan.me"
+            }
+        ],
+        "description": "The Lightest PHP database framework to accelerate development",
+        "homepage": "http://medoo.in",
+        "keywords": [
+            "database",
+            "lightweight",
+            "mssql",
+            "mysql",
+            "php framework",
+            "sql",
+            "sqlite"
+        ]
+    }
+]

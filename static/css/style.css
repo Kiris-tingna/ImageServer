@@ -1,0 +1,76 @@
+body {
+    font-family: "MicroSoft YaHei";
+}
+.navbar {
+    margin-bottom: 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+.flexslider{width: 500px; margin-bottom: 0}
+.flex-control-nav {
+    display: none;
+}
+
+.form-control {
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f5f5f5;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 13px;
+}
+
+.banner {
+    margin-bottom: 20px;
+    padding: 40px 0 20px 0;
+    background: url('../images/banner.jpg') 0 0 no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #676767;
+}
+
+.jumbotron {
+    background: rgba(238, 238, 238, 0.5);
+}
+/* small font*/
+.IM-f {
+    font-size: 12px;
+    color: #fff;
+}
+
+.IM-footer {
+    font-size: 12px;
+    color: #ccc;
+}
+.IM-item-head {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.IM-info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    margin-left: -40px;
+    margin-right: -40px;
+    border: 3px dashed #f8f8f8;
+}
+.modal-body .input-group {
+    margin: 10px 0;
+}
+
+.input-group-addon {
+    min-width: 100px;
+}
+
+/*component*/
+.content-header {
+    margin-top: 0;
+}
+.progress {
+    margin-bottom: 0;
+    height: 10px;
+}
+
+/*lists*/
+#PicAlbum .thumbnail{
+    height: 180px;
+}

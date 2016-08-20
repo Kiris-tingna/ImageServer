@@ -1,21 +1,21 @@
 <?php
-require_once 'autoload.php';    // 自动加载
+require_once 'vendor/autoload.php';
 require_once 'config.php';      // 常量配置
-require_once 'class/Functions.class.php'; // 全局工具函数
-
-/* site domain */
-define('SITE_DOMAIN', 'http://127.0.0.1');
-/* date time */
-date_default_timezone_set ('Asia/Shanghai');
+//require_once APP.'/route.php';       // 路由
 
 /* set debug */
 if (APP_DEBUG == true) {
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+    $whoops->register();
     error_reporting(E_ALL ^ E_NOTICE);
     ini_set('display_errors','On');
 } else {
     error_reporting(E_ALL);
     ini_set('display_errors','Off');
 }
+
+date_default_timezone_set ('Asia/Shanghai');
 
 /* magic quotes */
 if ( get_magic_quotes_gpc() ) {
@@ -25,4 +25,8 @@ if ( get_magic_quotes_gpc() ) {
     $_SESSION = stripSlashesDeep($_SESSION);
 }
 
-require_once 'route.php';       // 路由
+require_once CORE.'/common/function.php';
+require_once CORE.'/SAO.php';
+spl_autoload_register('\core\SAO::autoload');// 自动加载
+
+\core\SAO::run();
