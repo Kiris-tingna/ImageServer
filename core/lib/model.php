@@ -9,7 +9,20 @@
 namespace core\lib;
 
 
-class model
+class model extends \medoo
 {
+    public function __construct()
+    {
+        $options = array(
+            "database_type"=> "mysql",
+            "database_name"=> DB_NAME,
+            "server"    =>DB_HOST,
+            "username"  =>DB_USER,
+            "password"  =>DB_PASS,
+            "port"      =>DB_PORT,
+            "charset"   =>DB_CHARSET,
+        );
+        parent::__construct($options);
+    }
 
 }
